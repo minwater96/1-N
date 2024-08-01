@@ -3,8 +3,8 @@
 {% block body %}
 
     {% for article in articles %}
-        <p>{{article.title}}</p>
-        <a href="{% url 'articles:detail' id=article.id %}">detail</a>
+        <h1>{{article.title}}</h1>
+        <p>{{article.content}}</p>
         <hr>
     {% endfor %}
 
