@@ -25,7 +25,7 @@ def detail(request, id):
 def create(request):
     if request.method == 'POST':
         form = ArticleForm(request.POST)
-        if form.is_vaild():
+        if form.is_valid():
             article = form.save()
             return redirect('articles:detail', id=article.id)
     else:
